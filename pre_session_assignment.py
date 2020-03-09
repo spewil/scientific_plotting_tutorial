@@ -4,11 +4,8 @@ import matplotlib.pyplot as plt
 import pickle
 import numpy as np
 """
-Demo 1: Introducition to the matplotlib plt function
+Demo 0
 
-Here I provide a minimum example of using matplotlib for plotting.
-matplotlib.pyplot takes a minimum of 1 argument,
-corresponding to the y coordinate values of the points you want to plot.
 
 
 """
