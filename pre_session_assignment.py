@@ -6,7 +6,9 @@ import numpy as np
 """
 Demo 0
 
+Run this script from within PyCharm BEFORE the plotting tutorial.
 
+If you have any trouble, contact Spencer or Tim, preferably over Slack.
 
 """
 
