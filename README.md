@@ -17,9 +17,10 @@
 - [colorbar madness](https://stackoverflow.com/questions/13784201/matplotlib-2-subplots-1-colorbar)
 - [colorbar positioning tutorial](https://jdhao.github.io/2017/06/11/mpl_multiplot_one_colorbar/)
 
+### legend cheatsheet
 ![](images/legend_2vals.png)
 
-## What People Are Sayin'
+## What People Are Sayin' 'Bout Matlab...
 
 ![](images/matplotlib_recommendation1.png)
 ![](images/matlab_complaint1.png)
