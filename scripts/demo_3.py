@@ -3,6 +3,8 @@ DEMO 3 : Setting plot attributes
 
 In this demo, we demonstrate how you can set the many attributes of a plot.
 """
+import matplotlib
+matplotlib.use("Qt5Agg")
 import matplotlib.pyplot as plt
 
 if __name__ == '__main__':
@@ -14,7 +16,6 @@ if __name__ == '__main__':
     # Original plane plot
     plt.plot(x, y)
     plt.show()
-
 
     # Set x label
     plt.plot(x, y)
@@ -34,7 +35,6 @@ if __name__ == '__main__':
     plt.title('Per capita consumption of margarine in Maine')
     plt.show()
 
-
     # Set custom xticks
     plt.plot(x, y)
     plt.xlabel('Year')
@@ -42,7 +42,6 @@ if __name__ == '__main__':
     plt.title('Per capita consumption of margarine in Maine')
     plt.xticks(ticks=x[::2], labels=year[::2])
     plt.show()
-
 
     # Set the color of the line
     plt.plot(x, y, color='red')
@@ -52,7 +51,6 @@ if __name__ == '__main__':
     plt.xticks(ticks=x[::2], labels=year[::2])
     plt.show()
 
-
     # Set the transparency of the line
     plt.plot(x, y, color='red', alpha=0.5)
     plt.xlabel('Year')
@@ -60,7 +58,6 @@ if __name__ == '__main__':
     plt.title('Per capita consumption of margarine in Maine')
     plt.xticks(ticks=x[::2], labels=year[::2])
     plt.show()
-
 
     # Set the thickness of the line
     plt.plot(x, y, color='red', alpha=0.5, linewidth=3)
@@ -70,7 +67,6 @@ if __name__ == '__main__':
     plt.xticks(ticks=x[::2], labels=year[::2])
     plt.show()
 
-
     # Set the font size of labels and titles
     plt.plot(x, y, color='red', alpha=0.5, linewidth=3)
     plt.xlabel('Year', size=10, color='blue')
@@ -78,7 +74,6 @@ if __name__ == '__main__':
     plt.title('Per capita consumption of margarine in Maine', size=20)
     plt.xticks(ticks=x[::2], labels=year[::2])
     plt.show()
-
 
     # Set the axis limits
     plt.plot(x, y, color='red', alpha=0.5, linewidth=3)
@@ -89,6 +84,4 @@ if __name__ == '__main__':
     plt.xlim([0, 6])
     plt.show()
 
-
     # Summary: anatomy of a matplotlib plot
-

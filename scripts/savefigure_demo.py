@@ -1,8 +1,7 @@
+import os
 import matplotlib.pyplot as plt
 import numpy as np
 import pickle as pkl
-
-
 """
 DEMO 5: Saving and exporting figures in matplotlib.
 """
@@ -13,7 +12,8 @@ if __name__ == '__main__':
 
     fig, ax = plt.subplots()
     num_points = 1000
-    ax.scatter(np.random.normal(size=num_points), np.random.normal(size=num_points))
+    ax.scatter(
+        np.random.normal(size=num_points), np.random.normal(size=num_points))
     fig_name = 'default'
     fig.savefig(fig_name)
 
@@ -22,7 +22,6 @@ if __name__ == '__main__':
     # (2) The resolution of the plot is not very good; zoom in and you see
     # things get pixelated rather quickly
 
-
     # Saving the plot with a specified size
 
     fig, ax = plt.subplots()
@@ -30,10 +29,10 @@ if __name__ == '__main__':
     figure_height = 4
     fig.set_size_inches(figure_width, figure_height)
     num_points = 1000
-    ax.scatter(np.random.normal(size=num_points), np.random.normal(size=num_points))
+    ax.scatter(
+        np.random.normal(size=num_points), np.random.normal(size=num_points))
     fig_name = 'custom_size'
     fig.savefig(fig_name)
-
 
     # Saving the plot with a specified dots per inch
 
@@ -42,10 +41,10 @@ if __name__ == '__main__':
     figure_height = 4
     fig.set_size_inches(figure_width, figure_height)
     num_points = 1000
-    ax.scatter(np.random.normal(size=num_points), np.random.normal(size=num_points))
+    ax.scatter(
+        np.random.normal(size=num_points), np.random.normal(size=num_points))
     fig_name = 'custom_dpi'
     fig.savefig(fig_name, dpi=300)
-
 
     # Saving the plot so you can edit it elsewhere and don't have to
     # worrry about dpi
@@ -55,11 +54,11 @@ if __name__ == '__main__':
     figure_height = 4
     fig.set_size_inches(figure_width, figure_height)
     num_points = 1000
-    ax.scatter(np.random.normal(size=num_points), np.random.normal(size=num_points))
+    ax.scatter(
+        np.random.normal(size=num_points), np.random.normal(size=num_points))
     fig_name = 'scatter_w_svg'
     fig_ext = '.svg'
     fig.savefig(fig_name + fig_ext)
-
 
     # Making sure all plot elements gets saved
     # Sometimes your plot contains objects that are outside of the axis
@@ -67,6 +66,7 @@ if __name__ == '__main__':
     # (1) your x and y-axis may be too big
     # (2) your legend / colorbar is outside of the figure axis
     # This can be resolved via a simple parameter: bbox_inches
+
 
     def make_oversize_plot(num_cateogry=10, num_points=100):
         fig, ax = plt.subplots()
@@ -78,8 +78,7 @@ if __name__ == '__main__':
         ax.set_xlabel(r'$\mathcal{N}(0, 1)$')
         ax.set_ylabel(r'$\int\frac{\mathcal{N}(0, 1)}{e + \alpha}$')
         ax.set_title('A massive title', size=60)
-        ax.legend(bbox_to_anchor=[1.04, 1.04], title='Legend title',
-                 ncol=2)
+        ax.legend(bbox_to_anchor=[1.04, 1.04], title='Legend title', ncol=2)
 
         return fig, ax
 
@@ -94,7 +93,6 @@ if __name__ == '__main__':
     fig_name = 'uncropped_figure_example'
     fig_ext = '.png'
     fig.savefig(fig_name, bbox_inches='tight')
-
 
     # Optional: save plot as pickle
     # Note that saving figure as pickle is normally not recommended, as there is no gurantee that you will be able
@@ -115,3 +113,23 @@ if __name__ == '__main__':
 
     ax.set_title('New title')
     fig.show()
+    '''
+        a function I often use for saving
+    '''
+
+    def save_fig(fig, save_dir, name):
+        image_path = os.path.join(*[save_dir, name + ".png"])
+        fig.savefig(
+            image_path,
+            dpi=150,
+            facecolor='w',
+            edgecolor='w',
+            orientation='portrait',
+            papertype=None,
+            format=None,
+            transparent=True,
+            bbox_inches=None,
+            pad_inches=0,
+            frameon=False,
+            metadata=None)
+        return image_path

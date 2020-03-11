@@ -1,14 +1,13 @@
+import matplotlib
+matplotlib.use("Qt5Agg")
 import matplotlib.pyplot as plt
 import numpy as np
-
-
 """
 DEMO 4: Overlaying multiple plot objects on a single plot.
 
 """
 
 if __name__ == '__main__':
-
 
     year = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009]
 
@@ -21,7 +20,6 @@ if __name__ == '__main__':
 
     plt.show()
 
-
     # Plotting multiple lines and scatter
     plt.plot(year, margarine_consumption)
     plt.scatter(year, margarine_consumption)
@@ -31,6 +29,4 @@ if __name__ == '__main__':
 
     plt.show()
 
-
     # Having multiple y-axis (?)
-
