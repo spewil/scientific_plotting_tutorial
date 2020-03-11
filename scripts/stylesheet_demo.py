@@ -5,21 +5,21 @@ import numpy as np
 Demo: Custom stylesheet and functions for modifying plots.
 
 References: 
-
-Matplotlib style gallery: https://tonysyu.github.io/raw_content/matplotlib-style-gallery/gallery.html
+ - Matplotlib style gallery: https://tonysyu.github.io/raw_content/matplotlib-style-gallery/gallery.html
 """
 
 def make_figure():
 
     # Default Plot
     fig, ax = plt.subplots()
+    fig.set_size_inches(4, 4)
     ax.scatter(np.random.normal(size=100), np.random.normal(size=100))
     ax.set_xlabel('X title')
     ax.set_ylabel('Y title')
 
     return fig, ax
 
-if __name__ == '__main__'
+if __name__ == '__main__':
 
     # Show the default plotting behaviour
 
@@ -59,4 +59,9 @@ if __name__ == '__main__'
 
 
     # Running a custom stylesheet that I wrote
+
+    stylesheet_path = '../stylesheets/nature-reviews.mplstyle'
+    with plt.style.context(stylesheet_path):
+        fig, ax = make_figure()
+        plt.show()
 
