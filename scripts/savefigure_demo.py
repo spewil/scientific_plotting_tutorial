@@ -47,7 +47,7 @@ if __name__ == '__main__':
     fig.savefig(fig_name, dpi=300)
 
     # Saving the plot so you can edit it elsewhere and don't have to
-    # worrry about dpi
+    # worry about dpi
 
     fig, ax = plt.subplots()
     figure_width = 6
@@ -88,7 +88,7 @@ if __name__ == '__main__':
     fig_ext = '.png'
     fig.savefig(fig_name + fig_ext, dpi=300)
 
-    # Not saved but ensuring all elements are kept inside the plot
+    # Ensuring all elements are kept inside the plot
     fig, ax = make_oversize_plot()
     fig_name = 'uncropped_figure_example'
     fig_ext = '.png'
