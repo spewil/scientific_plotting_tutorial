@@ -32,7 +32,6 @@ if __name__ == '__main__':
     plt.ylabel('Divorce rate')
 
     plt.show()
-
     plt.close()
 
     # Subplots in a loop
@@ -56,14 +55,3 @@ if __name__ == '__main__':
 
     # Exercise, re-do the above plot, but instead have two rows and two columns
     # Notice how matplotlib orders the plots
-
-    num_col = 2
-    num_row = 2
-    for n, y_val in enumerate(y_list):
-
-        plt.subplot(num_col, num_row, n + 1)
-        plt.title('Plot ' + str(n + 1))
-        plt.scatter(x0, y_val)
-        plt.plot(x0, y_val)
-
-    plt.show()

@@ -23,3 +23,5 @@ for _ in range(100):
     fig.add_axes(ax)
 
 plt.show()
+
+# zoombox plot

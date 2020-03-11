@@ -52,4 +52,9 @@ for ax_idx in range(1, rows * cols + 1):
 # what about a title for the figure?
 fig.suptitle("I'm the `suptitle`")
 
+# take off the spines?
+# Hide the right and top spines
+# ax.spines['right'].set_visible(False)
+# ax.spines['top'].set_visible(False)
+
 plt.show()
