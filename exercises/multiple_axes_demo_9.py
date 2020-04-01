@@ -1,5 +1,6 @@
-import numpy as np
 import matplotlib
+import numpy as np
+
 matplotlib.use("Qt5Agg")
 import matplotlib.pyplot as plt
 
@@ -38,3 +39,6 @@ ax_w.set_ylim(0, 1)
 ax.set_ylim(0, 1000)
 fig.tight_layout()
 plt.show()
+
+# Exercise -- using the provided data,
+# plot binned spikes and behavior on one plot
