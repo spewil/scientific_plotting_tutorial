@@ -31,11 +31,6 @@
   - Saving
   - Make something pretty
 
-## todo
-- make a zoombox plot
-- multiple axes exercise?
-- colorbar exercise / better example?
-
 ### docs
 - [matplotlib plt API](https://matplotlib.org/3.2.0/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot)
 - [matplotlib Fig/Axes API](https://matplotlib.org/3.2.0/api/axes_api.html#matplotlib.axes.Axes)
@@ -50,6 +45,7 @@
 - [more legend help](https://stackoverflow.com/questions/4700614/how-to-put-the-legend-out-of-the-plot)
 - [colorbar madness](https://stackoverflow.com/questions/13784201/matplotlib-2-subplots-1-colorbar)
 - [colorbar positioning tutorial](https://jdhao.github.io/2017/06/11/mpl_multiplot_one_colorbar/)
+- [zoombox plot](http://akuederle.com/matplotlib-zoomed-up-inset)
 
 ### legend cheatsheet
 ![](images/legend_2vals.png)
