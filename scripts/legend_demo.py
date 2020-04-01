@@ -43,3 +43,40 @@ fig.legend(loc='upper center', ncol=4, bbox_to_anchor=(0.875, 0.95))
 fig.tight_layout(rect=[0, 0, 1, .9])
 # fig.subplots_adjust(bottom=0)
 plt.show()
+
+
+
+"""
+Extras: sometimes you want to create a legend for a subset of objects that are plotted,
+or you want to create a legend with objects that are not plotted. 
+You can do this by creating a list of patches and calling ax.legend()
+"""
+
+
+fig, ax = plt.subplots()
+ax.scatter(1, 1, marker='>', color='blue')
+ax.scatter(2, 1, marker='>', color='red')
+ax.scatter(2, 2, marker='v', color='blue')
+ax.scatter(1, 2, marker='v', color='red')
+
+legend_elements = [Line2D([0], [0], marker='>',
+                          color='w', label='Scatter',
+                          markerfacecolor='black',
+                          markersize=10),
+                  Line2D([0], [0], marker='v',
+                          color='w', label='Scatter',
+                          markerfacecolor='black',
+                          markersize=10),
+                  Line2D([0], [0], lw=4,
+                          color='blue'),
+                  Line2D([0], [0], lw=4,
+                          color='red'),
+                  ]
+
+labels = ['Neuron 1', 'Neuron 2',
+         'Before stimulus', 'After stimulus']
+
+
+ax.legend(legend_elements, labels)
+
+plt.show()

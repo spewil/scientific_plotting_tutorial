@@ -2,6 +2,7 @@ import matplotlib
 matplotlib.use("Qt5Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib.lines import Line2D
 
 matplotlib.style.use("seaborn-dark")
 
@@ -51,3 +52,46 @@ plt.show()
 # Exercise -- change this plot to show the data provided
 # E.g. subplot with legend for cells in top, behavioral data in bottom
 # Axes legend and Figure legend with custom markers
+
+
+"""
+Extras: sometimes you want to create a legend for a subset of objects that are plotted,
+or you want to create a legend with objects that are not plotted. 
+You can do this by creating a list of patches and calling ax.legend()
+
+In this example, each scatter point has two attributes that represent 
+different information: 
+
+(1) shape of the scatter point: represents the neuron number 
+(2) color of the scatter point: represents whether the activity is before or after the stimulus 
+
+"""
+
+
+fig, ax = plt.subplots()
+ax.scatter(1, 1, marker='>', color='blue')
+ax.scatter(2, 1, marker='>', color='red')
+ax.scatter(2, 2, marker='v', color='blue')
+ax.scatter(1, 2, marker='v', color='red')
+
+legend_elements = [Line2D([0], [0], marker='>',
+                          color='w', label='Scatter',
+                          markerfacecolor='black',
+                          markersize=10),
+                  Line2D([0], [0], marker='v',
+                          color='w', label='Scatter',
+                          markerfacecolor='black',
+                          markersize=10),
+                  Line2D([0], [0], lw=4,
+                          color='blue'),
+                  Line2D([0], [0], lw=4,
+                          color='red'),
+                  ]
+
+labels = ['Neuron 1', 'Neuron 2',
+         'Before stimulus', 'After stimulus']
+
+
+ax.legend(legend_elements, labels)
+
+plt.show()
