@@ -84,4 +84,18 @@ if __name__ == '__main__':
     plt.xlim([0, 6])
     plt.show()
 
+    # Turning off spines
+    plt.plot(x, y, color='red', alpha=0.5, linewidth=3)
+    plt.xlabel('Year', size=10, color='blue')
+    plt.ylabel('Margarine consumed (pounds)', size=10, color='red')
+    plt.title('Per capita consumption of margarine in Maine', size=20)
+    # plt.xticks(ticks=x[::2], labels=year[::2])
+    plt.xlim([0, 6])
+    plt.gca().spines['top'].set_visible(False)
+    plt.gca().spines['right'].set_visible(False)
+    plt.show()
+
     # Summary: anatomy of a matplotlib plot
+    # See: https://matplotlib.org/3.1.1/gallery/showcase/anatomy.html
+
+    # Exercise: Set major and minor grid lines to the above plots

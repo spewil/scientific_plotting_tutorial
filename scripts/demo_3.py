@@ -85,3 +85,4 @@ if __name__ == '__main__':
     plt.show()
 
     # Summary: anatomy of a matplotlib plot
+    # See: https://matplotlib.org/3.1.1/gallery/showcase/anatomy.html

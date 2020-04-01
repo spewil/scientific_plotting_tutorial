@@ -25,6 +25,12 @@ if __name__ == '__main__':
 
     # Let's say we now want to change some property of the first plot
     # We then need to declare that we are editing the first subplot
+    plt.subplot(121)
+    plt.plot(margarine_consumption)
+
+    plt.subplot(122)
+    plt.plot(divorce_rate)
+
     plt.subplot(1, 2, 1)
     plt.ylabel('Margarine consumption')
 

@@ -33,6 +33,11 @@ if __name__ == '__main__':
     plt.show()
 
     # Heatmap / Image plot
+    # Note: the input matrix to imshow can be three things
+    # 1) (M, N): standard 2D matrix, where M is the number of rows anb N the number of columns,
+    # in which case the entry are scalar values, eg. spike rate of particular neuron at a particular time bin
+    # 2) (M, N, 3): image with RGB values (useful for showing images), RGB values vary from 0 - 1 or 0 - 255
+    # 3) (M, N, 4): image with RGB values and a further transparency value that vary from 0 - 1 or 0 - 255
 
     example_matrix = np.load('../data/example_matrix.npy')
     print('Shape of numpy array: ')
