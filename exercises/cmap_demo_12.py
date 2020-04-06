@@ -19,7 +19,7 @@ if __name__ == '__main__':
     fig, axs = plt.subplots()
     img1 = axs.imshow(noiseless_data, cmap=colormap_name)
     # img2 = axs[1].imshow(noisy_data, cmap=colormap_name)
-    cbar2 = fig.colorbar(img2)
+    cbar1 = fig.colorbar(img1)
     plt.show()
 
 

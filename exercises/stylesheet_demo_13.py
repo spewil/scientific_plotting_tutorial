@@ -11,11 +11,13 @@ References:
 def make_figure():
 
     # Default Plot
-    fig, ax = plt.subplots()
-    fig.set_size_inches(4, 4)
+    fig, ax = plt.subplots(dpi=50)
+    # you should set dpi to at least 300 for saving
+    # I have set it to 50 here for easier display on a small screen.
     ax.scatter(np.random.normal(size=100), np.random.normal(size=100))
     ax.set_xlabel('X title')
     ax.set_ylabel('Y title')
+    fig.set_size_inches(4, 4)
 
     return fig, ax
 
@@ -55,8 +57,6 @@ if __name__ == '__main__':
     In this part, we will make a copy of the default.mplstyle and 
     make some edits to modify the default plotting parameters of matplotlib.
     """
-
-
 
     # Running a custom stylesheet that I wrote
 

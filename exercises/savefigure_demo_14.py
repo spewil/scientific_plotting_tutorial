@@ -25,7 +25,7 @@ if __name__ == '__main__':
     # Saving the plot with a specified size
 
     fig, ax = plt.subplots()
-    figure_width = 6
+    figure_width = 8
     figure_height = 4
     fig.set_size_inches(figure_width, figure_height)
     num_points = 1000

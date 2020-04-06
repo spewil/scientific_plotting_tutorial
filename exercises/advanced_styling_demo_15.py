@@ -22,10 +22,11 @@ via 'pip install sciplotlib'
 def make_figure():
 
     # Default Plot
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(dpi=80)  # again, small dpi for demo purposes only
     fig.set_size_inches(4, 4)
     num_category = 5
     num_points = 10
+    np.random.seed(seed=123)
     for cat in np.arange(num_category):
         ax.scatter(
             np.random.normal(size=num_points),
@@ -123,7 +124,7 @@ def apply_gradient(ax,
 
 
 if __name__ == '__main__':
-    with plt.style.context('../stylesheets/nature.mplstyle'):
+    with plt.style.context('../stylesheets/nature-reviews.mplstyle'):
         fig, ax = make_figure()
         fig, ax = set_bounds(fig, ax)
         apply_gradient(
